@@ -1,0 +1,33 @@
+---
+description: Firebrand Agents multi-agent docs contract and escalation
+alwaysApply: true
+---
+
+# Firebrand Agents workflow
+
+Use the shared **docs/ contract** in the application repo. Prefer existing files; create `docs/` from Firebrand Agents templates when missing.
+
+| Artifact | Path | Owner |
+|----------|------|-------|
+| Plan | `docs/project-plan.md` | PM |
+| Analysis | `docs/analysis.md` | BA |
+| UI/UX | `docs/uiux-design.md` | UID |
+| Tech design | `docs/technical-design.md` | TL |
+| Data | `docs/data-design.md` | DBE |
+| DevOps | `docs/devops.md` | DO |
+| Test strategy | `docs/test-strategy.md` | QAL |
+| Test report (web) | `docs/test-report.md` | playwright-tester |
+| Test report (Flutter) | `docs/flutter-test-report.md` | flutter-tester |
+| Security review | `docs/security-review.md` | SEC |
+
+Stable IDs: `FR-`, `NFR-`, `SCR-`, `WP-`, `T-`, `Q-`. Do not silently rewrite BA FRs.
+
+**Only PM** (`project-manager`) asks the client. Other roles list **Blockers for PM** and mark guesses **Assumption (pending PM)**. Never invent business rules or FRs.
+
+Default stacks: **ASP.NET Core / C#**, **Angular**, **Flutter**. Match the repo when it already differs. Playwright is **web-only**. Native Flutter tests are `flutter-tester`.
+
+Default order: PM → BA → UID+TL → DBE → BED+DO → FED/MFD → QAL → playwright-tester and/or flutter-tester → L10N (if multi-language) → A11Y → SEC+CR → TL → TW. Invoke PERF when NFRs require it. One work package per developer invoke; do not build the whole product in one pass.
+
+If `.cursor/rules/project-context.mdc` exists, read it for source control, CI, hosting, auth, stack overrides, and locales. Do not re-ask the user for info already in that file.
+
+Subagents have clean context — invoke with full paths and FR/WP/SCR IDs.

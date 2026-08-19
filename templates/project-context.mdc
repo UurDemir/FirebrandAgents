@@ -1,0 +1,84 @@
+---
+description: Project-specific context for Firebrand Agents — auto-loaded every chat
+alwaysApply: true
+---
+
+# Project context
+
+<!-- Fill in once; every agent reads this automatically. Delete unused rows. -->
+
+## Product
+
+| Field | Value |
+|-------|-------|
+| Name | |
+| One-liner | |
+| Platforms | Web / Mobile / API (delete unused) |
+
+## Source control
+
+| Field | Value |
+|-------|-------|
+| Provider | GitHub / GitLab / Bitbucket / Azure DevOps / other |
+| Repo URL | |
+| Branch strategy | trunk / GitFlow / GitHub Flow / other |
+| Main branch | `main` |
+| PR required | Yes / No |
+
+## CI / CD
+
+| Field | Value |
+|-------|-------|
+| CI system | GitHub Actions / Azure Pipelines / GitLab CI / other |
+| Deploy target | Azure / AWS / GCP / Vercel / on-prem / other |
+| Environments | dev, staging, prod |
+| Container registry | |
+
+## Hosting & infra
+
+| Field | Value |
+|-------|-------|
+| Database | SQL Server / PostgreSQL / MySQL / other |
+| Cache | Redis / none |
+| Storage | Azure Blob / S3 / local / none |
+| Auth provider | Identity Server / Auth0 / Firebase Auth / Keycloak / custom |
+| Auth method | JWT / Cookie / OAuth2+OIDC / other |
+
+## Stack overrides
+
+<!-- Only fill if different from Firebrand defaults (.NET / Angular / Flutter) -->
+
+| Layer | Technology |
+|-------|-----------|
+| Backend | |
+| Frontend web | |
+| Mobile | |
+| API style | REST / GraphQL / gRPC |
+
+## Localization
+
+| Field | Value |
+|-------|-------|
+| Multi-language | Yes / No |
+| Default locale | en |
+| Target locales | |
+
+## Conventions
+
+| Area | Convention |
+|------|-----------|
+| Commit messages | Conventional Commits / other |
+| Branch naming | `feature/`, `fix/`, `chore/` |
+| Code style | Prettier + ESLint / editorconfig / other |
+| Secrets | .env / Azure Key Vault / AWS Secrets Manager / other |
+
+## Team / contacts
+
+| Role | Name / handle |
+|------|--------------|
+| Product owner | |
+| Tech lead | |
+
+## Notes
+
+<!-- Anything else agents should know in every chat: special constraints, third-party integrations, deadlines, etc. -->
