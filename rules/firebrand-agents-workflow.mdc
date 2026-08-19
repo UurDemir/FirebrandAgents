@@ -30,4 +30,6 @@ Default order: PM → BA → UID+TL → DBE → BED+DO → FED/MFD → QAL → p
 
 If `.cursor/rules/project-context.mdc` exists, read it for source control, CI, hosting, auth, stack overrides, and locales. Do not re-ask the user for info already in that file.
 
+**Always use the pre-built named subagents** (`business-analyst`, `team-lead`, `uiux-designer`, `database-engineer`, `backend-developer`, `frontend-developer`, `mobile-flutter-developer`, `devops-engineer`, `qa-lead`, `playwright-tester`, `flutter-tester`, `accessibility-specialist`, `security-reviewer`, `code-reviewer`, `performance-engineer`, `technical-writer`, `localization-engineer`). Never create ad-hoc agents with custom system prompts. Never role-play as another specialist. Invoke subagents by name or output a handoff prompt for the user.
+
 Subagents have clean context — invoke with full paths and FR/WP/SCR IDs.
